@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="362px" height="317px" viewBox="0 0 362 317" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphic</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-4" cx="27.0703125" cy="26.71875" r="26.71875"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Login" sketch:type="MSArtboardGroup" transform="translate(-295.000000, -221.000000)">
+            <g id="Graphic" sketch:type="MSLayerGroup" transform="translate(296.000000, 222.000000)">
+                <circle id="Oval-123" fill="#0B9E94" sketch:type="MSShapeGroup" cx="180" cy="188.4375" r="126.5625"></circle>
+                <path d="M50.625,153.079591 C21.2146465,145.835105 0,129.209415 0,101.25 C0,73.2905845 22.6655845,50.625 50.625,50.625 C78.5844155,50.625 101.25,73.2905845 101.25,101.25 C101.25,121.977851 88.9590454,135.336456 73.318103,145.835105 C68.4917209,149.074711 73.318103,160.787208 73.318103,160.787208 C73.318103,160.787208 63.9524068,156.362455 50.625,153.079591 Z" id="Oval-126" stroke-opacity="0.2" stroke="#979797" fill="#FEFEFE" filter="url(#filter-1)" sketch:type="MSShapeGroup"></path>
+                <path d="M309.375,153.079591 C279.964647,145.835105 258.75,129.209415 258.75,101.25 C258.75,73.2905845 281.415585,50.625 309.375,50.625 C337.334415,50.625 360,73.2905845 360,101.25 C360,121.977851 347.709045,135.336456 332.068103,145.835105 C327.241721,149.074711 332.068103,160.787208 332.068103,160.787208 C332.068103,160.787208 322.702407,156.362455 309.375,153.079591 Z" id="Oval-136" stroke-opacity="0.2" stroke="#979797" fill="#FEFEFE" filter="url(#filter-2)" sketch:type="MSShapeGroup" transform="translate(309.375000, 105.706104) scale(-1, 1) translate(-309.375000, -105.706104) "></path>
+                <path d="M129.375,50.625 C129.375,22.6655845 152.040585,0 180,0 C207.959415,0 230.625,22.6655845 230.625,50.625 C230.625,78.5844155 211.435731,92.370429 187.940068,102.601265 C174.987741,108.241162 164.89868,115.267267 164.89868,115.267267 C164.89868,115.267267 163.452814,99.0328217 156.036565,94.6905613 C146.47791,89.0939084 129.375,74.0289466 129.375,50.625 Z" id="Oval-135" stroke-opacity="0.2" stroke="#979797" fill="#FEFEFE" filter="url(#filter-3)" sketch:type="MSShapeGroup"></path>
+                <path d="M54.1799525,79.3608042 C52.5617844,77.8584907 49.9114538,77.8293055 48.2546074,79.3006488 L25.4953926,99.5117068 C23.8410829,100.980797 24.2964369,102.171731 26.4915505,102.171731 L30,102.171731 L30,122.562173 C30,124.771492 31.7989852,126.5625 33.9927039,126.5625 L67.2572961,126.5625 C69.4624056,126.5625 71.25,124.768988 71.25,122.562173 L71.25,102.171731 L74.7584495,102.171731 C76.962922,102.171731 77.4421182,100.957488 75.8200475,99.4515515 L54.1799525,79.3608042 Z M40,102.177074 L47.4999997,102.177074 L47.4999997,94.9724479 L55.0000003,94.9724479 L55.0000003,102.177074 L62.5,102.177074 L62.5,109.462943 L55,109.462943 L55,116.821645 L47.5,116.821645 L47.5,109.462943 L40,109.462943 L40,102.177074 Z" id="clinic" fill="#0B9E94" sketch:type="MSShapeGroup"></path>
+                <g id="General" transform="translate(151.875000, 21.390625)" sketch:type="MSShapeGroup">
+                    <path d="M11.25,5.05698529 L0,5.05698529 C0,5.05698529 6,35.2040441 16.875,35.2040441 C28.5,35.2040441 33.75,5.05698529 33.75,5.05698529 L21.75,5.05698529" id="Path-302" stroke="#0B9E94" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.875,35.5716912 L16.875,43.2922794 C16.875,43.2922794 17.2499999,59.46875 34.125,59.46875 C51.0000001,59.46875 51.75,43.2922794 51.75,43.2922794 L51.75,21.96875" id="Path-303" stroke="#0B9E94" stroke-width="5" stroke-linecap="round"></path>
+                    <ellipse id="Oval-93" stroke="#0B9E94" stroke-width="5" cx="51.75" cy="17.5569853" rx="4.5" ry="4.41176471"></ellipse>
+                    <circle id="Oval-94" fill="#0B9E94" cx="9.375" cy="5" r="5"></circle>
+                    <circle id="Oval-95" fill="#0B9E94" cx="23.890625" cy="5" r="5"></circle>
+                </g>
+              
+              
+                
+                <path d="M317.8125,89.8227891 L317.8125,97.734375 L300.9375,97.734375 L300.9375,89.8227813 C298.511373,89.198565 296.71875,86.9977775 296.71875,84.3808693 L296.71875,78.7441307 C296.71875,75.6407705 299.23835,73.125 302.344271,73.125 L316.405729,73.125 C319.512618,73.125 322.03125,75.642241 322.03125,78.7441307 L322.03125,84.3808693 C322.03125,86.9989017 320.238097,89.1987574 317.8125,89.8227891 L317.8125,89.8227891 Z M300.9375,97.734375 L317.8125,97.734375 L331.365374,122.888902 C332.871442,126.471075 330.92484,129.375 327.035951,129.375 L291.714887,129.375 C287.817745,129.375 285.879177,126.472203 287.386032,122.888902 L300.9375,97.734375 Z M306.5625,97.734375 L312.1875,97.734375 L325.740374,122.888902 L293.011032,122.888902 L306.5625,97.734375 Z M306.5625,84.375 L312.1875,84.375 L312.1875,97.734375 L306.5625,97.734375 L306.5625,84.375 Z M302.34375,78.75 L316.40625,78.75 L316.40625,84.375 L302.34375,84.375 L302.34375,78.75 Z M311.484375,104.765625 L318.005999,118.670152 L300.745407,118.670152 L307.265625,104.765625 L311.484375,104.765625 Z" id="Rectangle-93" fill="#0B9E94" sketch:type="MSShapeGroup"></path>
+                <g id="Devices" transform="translate(97.031250, 136.406250)" sketch:type="MSShapeGroup">
+                    <rect id="Rectangle-432" stroke="#FFFFFF" stroke-width="4" fill="#0B9E94" x="28.125" y="0" width="120.9375" height="84.375" rx="2"></rect>
+                    <circle id="Oval-129" fill="#FFFFFF" cx="32.34375" cy="4.21875" r="1.40625"></circle>
+                    <circle id="Oval-130" fill="#FFFFFF" cx="36.5625" cy="4.21875" r="1.40625"></circle>
+                    <circle id="Oval-131" fill="#FFFFFF" cx="40.78125" cy="4.21875" r="1.40625"></circle>
+                    <path d="M0,50.1814987 C0,45.7665351 3.58334611,42.1875 8.00308797,42.1875 L81.293787,42.1875 C85.7137705,42.1875 89.296875,45.7702834 89.296875,50.1814987 L89.296875,96.0685013 C89.296875,100.483465 85.7135289,104.0625 81.293787,104.0625 L8.00308797,104.0625 C3.58310453,104.0625 0,100.479717 0,96.0685013 L0,50.1814987 Z M5.625,75.9375 C7.17830086,75.9375 8.4375,74.6783009 8.4375,73.125 C8.4375,71.5716991 7.17830086,70.3125 5.625,70.3125 C4.07169914,70.3125 2.8125,71.5716991 2.8125,73.125 C2.8125,74.6783009 4.07169914,75.9375 5.625,75.9375 Z M85.078125,69.609375 L86.484375,69.609375 L86.484375,76.640625 L85.078125,76.640625 L85.078125,69.609375 Z" id="Rectangle-430" stroke="#FFFFFF" stroke-width="4" fill="#0B9E94"></path>
+                    <path d="M132.1875,47.5846586 C132.1875,45.3805407 133.978218,43.59375 136.191602,43.59375 L161.933398,43.59375 C164.144802,43.59375 165.9375,45.3870539 165.9375,47.5846586 L165.9375,100.071591 C165.9375,102.275709 164.146782,104.0625 161.933398,104.0625 L136.191602,104.0625 C133.980198,104.0625 132.1875,102.269196 132.1875,100.071591 L132.1875,47.5846586 Z M149.0625,101.25 C150.615801,101.25 151.875,99.9908009 151.875,98.4375 C151.875,96.8841991 150.615801,95.625 149.0625,95.625 C147.509199,95.625 146.25,96.8841991 146.25,98.4375 C146.25,99.9908009 147.509199,101.25 149.0625,101.25 Z" id="Rectangle-431" stroke="#FFFFFF" stroke-width="4" fill="#0B9E94"></path>
+                    <rect id="Rectangle-434" fill="#FFFFFF" x="145.546875" y="46.40625" width="7.03125" height="1.40625"></rect>
+                </g>
+                <g id="Magnifier-+-Lens" transform="translate(81.562500, 132.187500)">
+                    <g id="Magnifier" transform="translate(73.292056, 73.086115) rotate(-45.000000) translate(-73.292056, -73.086115) translate(4.034243, 38.984552)" sketch:type="MSShapeGroup">
+                        <rect id="Path" fill="#FFFFFF" x="56.25" y="30.234375" width="21.09375" height="7.03125"></rect>
+                        <circle id="Oval-132" stroke="#FFFFFF" stroke-width="10" fill="#FFFFFF" cx="104.765625" cy="33.75" r="33.75"></circle>
+                        <rect id="Rectangle-436" fill="#4A4A4A" x="0.703125" y="26.71875" width="56.25" height="14.0625" rx="6"></rect>
+                    </g>
+                    <g id="Lens" transform="translate(71.015625, 21.093750)">
+                        <mask id="mask-5" sketch:name="Oval 133" fill="white">
+                            <use xlink:href="#path-4"></use>
+                        </mask>
+                        <use id="Oval-133" fill="#D8D8D8" sketch:type="MSShapeGroup" xlink:href="#path-4"></use>
+                        <ellipse id="Oval-134" fill="#F0F0F0" sketch:type="MSShapeGroup" mask="url(#mask-5)" cx="17.134309" cy="14.506316" rx="28.384309" ry="28.384309"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
