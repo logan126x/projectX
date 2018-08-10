@@ -9,12 +9,12 @@ package medis;
  *
  * @author KHSCI5MCA16126
  */
-public class doclogin extends javax.swing.JFrame {
+public class pharmacy_login extends javax.swing.JFrame {
 
     /**
-     * Creates new form doclogin
+    
      */
-    public doclogin() {
+    public pharmacy_login() {
         initComponents();
     }
 
@@ -30,7 +30,8 @@ public class doclogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -38,7 +39,7 @@ public class doclogin extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -49,19 +50,26 @@ public class doclogin extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(300, 500));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 51));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 500));
         jPanel2.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/login-doctor.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/pharm_logo1.jpg"))); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(30, 80, 245, 211);
+        jLabel1.setBounds(70, 50, 168, 174);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(0, 0, 300, 400);
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("PHARMACY ");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(90, 230, 123, 30);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(0, 0, 300, 400);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 300, 500);
@@ -73,7 +81,7 @@ public class doclogin extends javax.swing.JFrame {
         jLabel4.setBounds(300, 40, 300, 50);
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel5.setText("Doctor ID");
+        jLabel5.setText("Pharmacist ID");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(330, 110, 110, 30);
 
@@ -100,13 +108,8 @@ public class doclogin extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jButton1.setText("Login");
         jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(390, 310, 90, 40);
+        jButton1.setBounds(400, 320, 90, 40);
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -120,10 +123,10 @@ public class doclogin extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(560, 0, 40, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(300, 0, 300, 400);
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\khsci5mca16126\\Downloads\\dialo_background.jpg")); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(300, 0, 300, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,10 +151,6 @@ public class doclogin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_close_button
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -169,20 +168,21 @@ public class doclogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(doclogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pharmacy_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(doclogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pharmacy_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(doclogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pharmacy_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(doclogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pharmacy_login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new doclogin().setVisible(true);
+                new pharmacy_login().setVisible(true);
             }
         });
     }
@@ -196,6 +196,7 @@ public class doclogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
