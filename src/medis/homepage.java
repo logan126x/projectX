@@ -52,6 +52,8 @@ public class homepage extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -242,7 +244,7 @@ public class homepage extends javax.swing.JFrame {
             }
         });
         jPanel11.add(jButton6);
-        jButton6.setBounds(23, 28, 110, 31);
+        jButton6.setBounds(60, 30, 110, 31);
 
         jButton7.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton7.setText("PHARMACY");
@@ -252,7 +254,7 @@ public class homepage extends javax.swing.JFrame {
             }
         });
         jPanel11.add(jButton7);
-        jButton7.setBounds(23, 94, 110, 32);
+        jButton7.setBounds(60, 90, 110, 32);
 
         jButton8.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton8.setText("PATIENT");
@@ -262,7 +264,7 @@ public class homepage extends javax.swing.JFrame {
             }
         });
         jPanel11.add(jButton8);
-        jButton8.setBounds(23, 160, 110, 31);
+        jButton8.setBounds(60, 150, 110, 31);
 
         jButton9.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton9.setText("ADMIN");
@@ -272,12 +274,20 @@ public class homepage extends javax.swing.JFrame {
             }
         });
         jPanel11.add(jButton9);
-        jButton9.setBounds(23, 234, 110, 33);
+        jButton9.setBounds(60, 210, 110, 33);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/loginbackg.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel11.add(jLabel5);
         jLabel5.setBounds(0, 0, 610, 350);
+
+        jLabel6.setText("jLabel6");
+        jPanel11.add(jLabel6);
+        jLabel6.setBounds(20, 34, 34, 20);
+
+        jLabel8.setText("jLabel8");
+        jPanel11.add(jLabel8);
+        jLabel8.setBounds(20, 34, 34, 20);
 
         jTabbedPane1.addTab("    LOGIN  ", jPanel11);
 
@@ -422,7 +432,9 @@ public class homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
