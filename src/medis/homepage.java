@@ -35,7 +35,6 @@ public class homepage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         btn_login = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -46,6 +45,8 @@ public class homepage extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel10 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         jPanel11 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -78,10 +79,10 @@ public class homepage extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        lhspanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 280, 50));
+        lhspanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 280, 60));
 
         jPanel3.setBackground(new java.awt.Color(85, 65, 118));
 
@@ -139,22 +140,7 @@ public class homepage extends javax.swing.JFrame {
             .addComponent(btn_login, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        lhspanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 280, 70));
-
-        jPanel6.setBackground(new java.awt.Color(66, 46, 103));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 280, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        lhspanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 280, 30));
+        lhspanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 280, 70));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\khsci5mca16126\\Downloads\\medislogo.png")); // NOI18N
@@ -181,7 +167,7 @@ public class homepage extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        lhspanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 280, 80));
+        lhspanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 280, 80));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -231,6 +217,11 @@ public class homepage extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
         jPanel10.add(jLabel4);
         jLabel4.setBounds(0, 0, 610, 350);
+
+        jScrollPane1.setViewportView(jTextPane1);
+
+        jPanel10.add(jScrollPane1);
+        jScrollPane1.setBounds(0, 0, 8, 22);
 
         jTabbedPane1.addTab("  HOME   ", jPanel10);
 
@@ -443,10 +434,11 @@ public class homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel lhspanel;
     // End of variables declaration//GEN-END:variables
 }

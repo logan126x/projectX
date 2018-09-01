@@ -51,6 +51,7 @@ public class doctor_page extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        profilepanel = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -109,6 +110,11 @@ public class doctor_page extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("PROFILE");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                docprofileclicked(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("LOG OUT");
@@ -201,7 +207,6 @@ public class doctor_page extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -233,6 +238,19 @@ public class doctor_page extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 27, -1, 610));
 
+        javax.swing.GroupLayout profilepanelLayout = new javax.swing.GroupLayout(profilepanel);
+        profilepanel.setLayout(profilepanelLayout);
+        profilepanelLayout.setHorizontalGroup(
+            profilepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
+        );
+        profilepanelLayout.setVerticalGroup(
+            profilepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(profilepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 540, 610));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -240,6 +258,10 @@ public class doctor_page extends javax.swing.JFrame {
     private void docproclick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_docproclick
         dispose();
     }//GEN-LAST:event_docproclick
+
+    private void docprofileclicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_docprofileclicked
+        
+    }//GEN-LAST:event_docprofileclicked
 
     /**
      * @param args the command line arguments
@@ -301,5 +323,6 @@ public class doctor_page extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel profilepanel;
     // End of variables declaration//GEN-END:variables
 }
