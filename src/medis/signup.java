@@ -5,6 +5,8 @@
  */
 package medis;
 
+import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
+
 /**
  *
  * @author KHSCI5MCA16126
@@ -71,7 +73,7 @@ public class signup extends javax.swing.JFrame {
         jLabel7.setBounds(0, 0, 300, 390);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 452);
+        jPanel2.setBounds(0, 0, 300, 0);
 
         jLabel4.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -102,6 +104,16 @@ public class signup extends javax.swing.JFrame {
         jButton1.setText("LOGIN");
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                adminloginbutton(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
         jButton1.setBounds(400, 320, 90, 30);
 
@@ -140,6 +152,16 @@ public class signup extends javax.swing.JFrame {
     private void close_button(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_button
         dispose();
     }//GEN-LAST:event_close_button
+
+    private void adminloginbutton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminloginbutton
+               String adminid="admin101";
+               String adminpass="12345";
+        
+    }//GEN-LAST:event_adminloginbutton
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

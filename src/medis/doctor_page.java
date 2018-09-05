@@ -74,10 +74,10 @@ public class doctor_page extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MEDIS");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 53, 34));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 60, 34));
 
         jButton1.setBackground(new java.awt.Color(236, 35, 35));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("X");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -85,7 +85,7 @@ public class doctor_page extends javax.swing.JFrame {
                 docproclick(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 50, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 40, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
@@ -232,9 +232,9 @@ public class doctor_page extends javax.swing.JFrame {
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 250, -1));
 
-        jPanel6.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel6.setBackground(new java.awt.Color(153, 153, 153));
         jPanel6.setLayout(null);
-        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 0, 35, 610));
+        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(249, 0, 20, 610));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 27, -1, 610));
 
@@ -242,14 +242,14 @@ public class doctor_page extends javax.swing.JFrame {
         profilepanel.setLayout(profilepanelLayout);
         profilepanelLayout.setHorizontalGroup(
             profilepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
         profilepanelLayout.setVerticalGroup(
             profilepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 610, Short.MAX_VALUE)
         );
 
-        getContentPane().add(profilepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 540, 610));
+        getContentPane().add(profilepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 560, 610));
 
         pack();
         setLocationRelativeTo(null);
