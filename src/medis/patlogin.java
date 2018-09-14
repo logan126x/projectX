@@ -107,7 +107,7 @@ public class patlogin extends javax.swing.JFrame {
         jButton1.setBounds(380, 310, 90, 40);
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("X");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -116,7 +116,7 @@ public class patlogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(560, 0, 40, 20);
+        jButton2.setBounds(550, 0, 50, 20);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");

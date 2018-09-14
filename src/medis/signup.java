@@ -6,6 +6,18 @@
 package medis;
 
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+//import javax.servlet.ServletException;
+//import javax.servlet.annotation.WebServlet;
+//import javax.servlet.http.HttpServlet;
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
+//import javax.servlet.http.HttpSession;
+
+
+
 
 /**
  *
@@ -36,11 +48,11 @@ public class signup extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        admin_id = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        admin_pass = new javax.swing.JPasswordField();
+        login = new javax.swing.JButton();
+        close = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,7 +85,7 @@ public class signup extends javax.swing.JFrame {
         jLabel7.setBounds(0, 0, 300, 390);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 0);
+        jPanel2.setBounds(0, 0, 300, 390);
 
         jLabel4.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -86,48 +98,43 @@ public class signup extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(330, 210, 60, 14);
 
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 204), 2, true));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(330, 130, 230, 40);
+        admin_id.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 204), 2, true));
+        jPanel1.add(admin_id);
+        admin_id.setBounds(330, 130, 230, 40);
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Admin Id");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(330, 110, 60, 14);
 
-        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 153), 2, true));
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(330, 230, 230, 40);
+        admin_pass.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 153), 2, true));
+        jPanel1.add(admin_pass);
+        admin_pass.setBounds(330, 230, 230, 40);
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        jButton1.setText("LOGIN");
-        jButton1.setBorder(null);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                adminloginbutton(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        login.setBackground(new java.awt.Color(204, 204, 204));
+        login.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        login.setText("LOGIN");
+        login.setBorder(null);
+        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(400, 320, 90, 30);
+        jPanel1.add(login);
+        login.setBounds(400, 320, 90, 30);
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("X");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        close.setBackground(new java.awt.Color(255, 51, 51));
+        close.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        close.setForeground(new java.awt.Color(255, 255, 255));
+        close.setText("X");
+        close.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 close_button(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(560, 0, 39, 20);
+        jPanel1.add(close);
+        close.setBounds(550, 10, 39, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -153,15 +160,37 @@ public class signup extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_close_button
 
-    private void adminloginbutton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminloginbutton
-               String adminid="admin101";
-               String adminpass="12345";
-        
-    }//GEN-LAST:event_adminloginbutton
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+          String adminid=admin_id.getText();
+               String adminpass = admin_pass.getText();
+               if(adminid=="admin007")
+               {
+                   Adminlogin_page a=new Adminlogin_page();
+                        a.setVisible(true);
+               }
+               
+               
+              /* try{
+                   
+                   Class.forName("com.mysql.jdbc.Driver");
+                   Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/medis","root","");
+                   Statement stmt =con.createStatement();
+                   ResultSet rs = stmt.executeQuery("select * from admin");
+                   while (rs.next())
+                   {
+                    //String id = rs.getString(1);
+                    //String pwsd = rs.getString(2);
+                    if(adminid == rs.getString(1)&& adminpass == rs.getString(2))
+                    { 
+                        Adminlogin_page a=new Adminlogin_page();
+                        a.setVisible(true);
+                    }
+                   }
+                   
+               }catch(Exception e)
+               {        }*/
+    }//GEN-LAST:event_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,8 +228,9 @@ public class signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField admin_id;
+    private javax.swing.JPasswordField admin_pass;
+    private javax.swing.JButton close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -210,7 +240,6 @@ public class signup extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton login;
     // End of variables declaration//GEN-END:variables
 }

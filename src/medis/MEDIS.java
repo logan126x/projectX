@@ -15,6 +15,9 @@ public class MEDIS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        homepage hme= new homepage();
+        hme.setVisible(true);
+        
         
         
     }
