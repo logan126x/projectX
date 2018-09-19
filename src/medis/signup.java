@@ -9,6 +9,7 @@ import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.*;
 //import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
 //import javax.servlet.http.HttpServlet;
@@ -162,16 +163,21 @@ public class signup extends javax.swing.JFrame {
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
-          String adminid=admin_id.getText();
-               String adminpass = admin_pass.getText();
-               if(adminid=="admin007")
-               {
-                   Adminlogin_page a=new Adminlogin_page();
-                        a.setVisible(true);
-               }
+               String adminid=admin_id.getText();
+               String adminpass;
+               adminpass= String.copyValueOf(admin_pass.getPassword());
+              // //if(adminid.equals("admin007") && adminpass.equals("qwerty"))
+               //{
+               //    Adminlogin_page a = new Adminlogin_page();
+               //         a.setVisible(true);
+              // }
+               //else
+              // {
+               //    JOptionPane.showMessageDialog(null, "Incorrect UserName or Password");
+               //}
                
                
-              /* try{
+             try{
                    
                    Class.forName("com.mysql.jdbc.Driver");
                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/medis","root","");
@@ -179,23 +185,27 @@ public class signup extends javax.swing.JFrame {
                    ResultSet rs = stmt.executeQuery("select * from admin");
                    while (rs.next())
                    {
-                    //String id = rs.getString(1);
                     //String pwsd = rs.getString(2);
-                    if(adminid == rs.getString(1)&& adminpass == rs.getString(2))
+                    if(adminid.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
                     { 
                         Adminlogin_page a=new Adminlogin_page();
                         a.setVisible(true);
+                 
+                         
+                        
                     }
                    }
                    
-               }catch(Exception e)
-               {        }*/
+                   
+               }
+                catch(Exception e){        
     }//GEN-LAST:event_loginActionPerformed
-
+    }
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

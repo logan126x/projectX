@@ -51,6 +51,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        admin_name_label = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
@@ -283,11 +284,18 @@ public class Adminlogin_page extends javax.swing.JFrame {
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_name_label, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(0, 26, Short.MAX_VALUE)
+                .addComponent(jLabel4))
+            .addComponent(admin_name_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane1.setMaximumSize(new java.awt.Dimension(1000, 1000));
@@ -610,6 +618,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel adddoclabel;
+    private javax.swing.JLabel admin_name_label;
     private javax.swing.JPanel dashpanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
