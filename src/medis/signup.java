@@ -25,10 +25,10 @@ import javax.swing.*;
  * @author KHSCI5MCA16126
  */
 public class signup extends javax.swing.JFrame {
-
-    /**
-     * Creates new form signup
-     */
+      Connection con=null;
+      PreparedStatement pst=null;
+      ResultSet rs=null;
+      
     public signup() {
         initComponents();
     }
@@ -49,7 +49,7 @@ public class signup extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        admin_id = new javax.swing.JTextField();
+        admin_id1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         admin_pass = new javax.swing.JPasswordField();
         login = new javax.swing.JButton();
@@ -99,9 +99,9 @@ public class signup extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(330, 210, 60, 14);
 
-        admin_id.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 204), 2, true));
-        jPanel1.add(admin_id);
-        admin_id.setBounds(330, 130, 230, 40);
+        admin_id1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 204), 2, true));
+        jPanel1.add(admin_id1);
+        admin_id1.setBounds(330, 130, 230, 40);
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Admin Id");
@@ -163,44 +163,56 @@ public class signup extends javax.swing.JFrame {
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
-               String adminid=admin_id.getText();
-               String adminpass;
-               adminpass= String.copyValueOf(admin_pass.getPassword());
-              // //if(adminid.equals("admin007") && adminpass.equals("qwerty"))
-               //{
-               //    Adminlogin_page a = new Adminlogin_page();
-               //         a.setVisible(true);
-              // }
-               //else
-              // {
-               //    JOptionPane.showMessageDialog(null, "Incorrect UserName or Password");
-               //}
+        con=my_sql_connect.connectdb();
+        String sq="Select * from login where Admin_id=? and admin_password=?";
+        
+       //String adminid=admin_id1.getText();
+      // String adminpass;
+       //adminpass= String.copyValueOf(admin_pass.getPassword());
+             
                
                
-             try{
-                   
-                   Class.forName("com.mysql.jdbc.Driver");
-                   Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/medis","root","");
-                   Statement stmt =con.createStatement();
-                   ResultSet rs = stmt.executeQuery("select * from admin");
-                   while (rs.next())
-                   {
-                    //String pwsd = rs.getString(2);
-                    if(adminid.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
-                    { 
-                        Adminlogin_page a=new Adminlogin_page();
-                        a.setVisible(true);
-                 
-                         
-                        
-                    }
+             try
+             {
+                 pst=con.prepareStatement(sq);
+                 pst.setString(1,admin_id1.getText());
+                 pst.setString(1,admin_pass.getText());
+                  rs=pst.executeQuery();
+                  if (rs.next())
+                  {
+                      //if(adminid.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
+                      //{
+                      JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
+                      Adminlogin_page a=new Adminlogin_page();
+                      a.setVisible(true);
                    }
+                  else
+                  {
+                      JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","access denied",JOptionPane.ERROR_MESSAGE);
+                      
+                  }
+                 //  Class.forName("com.mysql.jdbc.Driver");
+                  // Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/MEDIS","project","projectmedis");
+                 //  Statement stmt =con.createStatement();
+                 //  ResultSet rs = stmt.executeQuery("select * from admin_Details");
+                 //  while (rs.next())
+                 //  {
+                    //String pwsd = rs.getString(2);
+                 //   if(adminid.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
+                  //  { 
+                 //       Adminlogin_page a=new Adminlogin_page();
+                  //      a.setVisible(true);
+                 //
+                        
+                        
+                   // }
+                   //}
                    
                    
                }
-                catch(Exception e){        
+                catch(Exception e){}        
     }//GEN-LAST:event_loginActionPerformed
-    }
+   
     /**
      * @param args the command line arguments
      */
@@ -238,7 +250,7 @@ public class signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField admin_id;
+    private javax.swing.JTextField admin_id1;
     private javax.swing.JPasswordField admin_pass;
     private javax.swing.JButton close;
     private javax.swing.JLabel jLabel1;
