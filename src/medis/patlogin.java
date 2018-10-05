@@ -5,11 +5,18 @@
  */
 package medis;
 
+import java.sql.*;
+import javax.swing.*;
+
 /**
  *
  * @author KHSCI5MCA16126
  */
 public class patlogin extends javax.swing.JFrame {
+    
+    Connection con = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
 
     /**
      * Creates new form doclogin
@@ -33,11 +40,11 @@ public class patlogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        patientId = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        patientPassword = new javax.swing.JPasswordField();
+        patientLogin = new javax.swing.JButton();
+        closeBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,44 +86,49 @@ public class patlogin extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(330, 110, 110, 30);
 
-        jTextField1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(153, 51, 255));
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(34, 117, 117), 2, true));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(330, 140, 190, 40);
+        patientId.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        patientId.setForeground(new java.awt.Color(153, 51, 255));
+        patientId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(34, 117, 117), 2, true));
+        jPanel1.add(patientId);
+        patientId.setBounds(330, 140, 190, 40);
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Password");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(330, 210, 140, 30);
 
-        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(34, 117, 117), 2, true));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        patientPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(34, 117, 117), 2, true));
+        patientPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                patientPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(330, 240, 190, 40);
+        jPanel1.add(patientPassword);
+        patientPassword.setBounds(330, 240, 190, 40);
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jButton1.setText("Login");
-        jButton1.setBorder(null);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(380, 310, 90, 40);
+        patientLogin.setBackground(new java.awt.Color(204, 204, 255));
+        patientLogin.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        patientLogin.setText("Login");
+        patientLogin.setBorder(null);
+        patientLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patientLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(patientLogin);
+        patientLogin.setBounds(380, 310, 90, 40);
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("X");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        closeBtn.setBackground(new java.awt.Color(255, 51, 51));
+        closeBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        closeBtn.setForeground(new java.awt.Color(255, 255, 255));
+        closeBtn.setText("X");
+        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 close_button(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(550, 0, 50, 20);
+        jPanel1.add(closeBtn);
+        closeBtn.setBounds(550, 0, 50, 20);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -138,13 +150,47 @@ public class patlogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void patientPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_patientPasswordActionPerformed
 
     private void close_button(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_button
         dispose();
     }//GEN-LAST:event_close_button
+
+    private void patientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientLoginActionPerformed
+        // TODO add your handling code here:
+
+        con=my_sql_connect.connectdb();
+        String sq="Select * from admin patient patientID = ?";
+        
+        String patient_id=patientId.getText();
+        String patient_password= String.copyValueOf(patientPassword.getPassword());     
+                              
+            try
+            {
+                pst=con.prepareStatement(sq);
+                pst.setString(1,patient_id);
+                rs=pst.executeQuery();
+
+                if(rs.next()) 
+                {
+                    if(patient_id.equals(rs.getString(1)) && patient_password.equals(rs.getString(2)))
+                    {
+                        //JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
+                        Adminlogin_page a=new Adminlogin_page();
+                        a.setVisible(true);
+                    } 
+                }                   
+                else
+                {
+                     JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","Access Denied...",JOptionPane.ERROR_MESSAGE);   
+                }
+ 
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null,e);
+            }        
+    }//GEN-LAST:event_patientLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,8 +229,7 @@ public class patlogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton closeBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -193,7 +238,8 @@ public class patlogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField patientId;
+    private javax.swing.JButton patientLogin;
+    private javax.swing.JPasswordField patientPassword;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,12 +5,17 @@
  */
 package medis;
 
+import java.sql.*;
+import javax.swing.*;
 /**
  *
  * @author KHSCI5MCA16126
  */
 public class pharmacy_login extends javax.swing.JFrame {
 
+    Connection con = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
     /**
     
      */
@@ -34,11 +39,11 @@ public class pharmacy_login extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        pharmacistId = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        pharmacistPassword = new javax.swing.JPasswordField();
+        pharmacistLogin = new javax.swing.JButton();
+        closeBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,43 +90,48 @@ public class pharmacy_login extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(330, 110, 110, 30);
 
-        jTextField1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(330, 140, 190, 40);
+        pharmacistId.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        pharmacistId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
+        jPanel1.add(pharmacistId);
+        pharmacistId.setBounds(330, 140, 190, 40);
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Password");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(330, 210, 140, 30);
 
-        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        pharmacistPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
+        pharmacistPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                pharmacistPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(330, 240, 190, 40);
+        jPanel1.add(pharmacistPassword);
+        pharmacistPassword.setBounds(330, 240, 190, 40);
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jButton1.setText("Login");
-        jButton1.setBorder(null);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(400, 320, 90, 40);
+        pharmacistLogin.setBackground(new java.awt.Color(204, 204, 255));
+        pharmacistLogin.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        pharmacistLogin.setText("Login");
+        pharmacistLogin.setBorder(null);
+        pharmacistLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pharmacistLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(pharmacistLogin);
+        pharmacistLogin.setBounds(400, 320, 90, 40);
 
-        jButton2.setBackground(new java.awt.Color(255, 0, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("X");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        closeBtn.setBackground(new java.awt.Color(255, 0, 0));
+        closeBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        closeBtn.setForeground(new java.awt.Color(255, 255, 255));
+        closeBtn.setText("X");
+        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 close_button(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(560, 0, 40, 20);
+        jPanel1.add(closeBtn);
+        closeBtn.setBounds(560, 0, 40, 20);
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\khsci5mca16126\\Downloads\\dialo_background.jpg")); // NOI18N
         jLabel3.setText("jLabel3");
@@ -143,13 +153,47 @@ public class pharmacy_login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void pharmacistPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pharmacistPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_pharmacistPasswordActionPerformed
 
     private void close_button(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_button
         dispose();
     }//GEN-LAST:event_close_button
+
+    private void pharmacistLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pharmacistLoginActionPerformed
+        // TODO add your handling code here:
+
+        con=my_sql_connect.connectdb();
+        String sq="Select * from pharmacy where pharmacistID = ?";
+        
+        String pharmacist_id=pharmacistId.getText();
+        String pharmacist_password= String.copyValueOf(pharmacistPassword.getPassword());     
+                              
+            try
+            {
+                pst=con.prepareStatement(sq);
+                pst.setString(1,pharmacist_id);
+                rs=pst.executeQuery();
+
+                if(rs.next()) 
+                {
+                    if(pharmacist_id.equals(rs.getString(1)) && pharmacist_password.equals(rs.getString(2)))
+                    {
+                        //JOptionPane.showMessageDialog(null,"WELCOME ");
+                        Adminlogin_page a=new Adminlogin_page();
+                        a.setVisible(true);
+                    } 
+                }                   
+                else
+                {
+                     JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","Access denied...",JOptionPane.ERROR_MESSAGE);   
+                }
+ 
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null,e);
+            }        
+    }//GEN-LAST:event_pharmacistLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,8 +232,7 @@ public class pharmacy_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton closeBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -199,7 +242,8 @@ public class pharmacy_login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField pharmacistId;
+    private javax.swing.JButton pharmacistLogin;
+    private javax.swing.JPasswordField pharmacistPassword;
     // End of variables declaration//GEN-END:variables
 }

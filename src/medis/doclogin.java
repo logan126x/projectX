@@ -5,12 +5,17 @@
  */
 package medis;
 
+import javax.swing.JOptionPane;
+import java.sql.*;
+
 /**
  *
  * @author KHSCI5MCA16126
  */
 public class doclogin extends javax.swing.JFrame {
-
+    Connection con = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
     /**
      * Creates new form doclogin
      */
@@ -33,10 +38,10 @@ public class doclogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        doctorId = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        doctorPassword = new javax.swing.JPasswordField();
+        doc_login = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -77,36 +82,36 @@ public class doclogin extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(330, 110, 110, 30);
 
-        jTextField1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(330, 140, 190, 40);
+        doctorId.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        doctorId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
+        jPanel1.add(doctorId);
+        doctorId.setBounds(330, 140, 190, 40);
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel6.setText("Password");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(330, 210, 140, 30);
 
-        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        doctorPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
+        doctorPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                doctorPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(330, 240, 190, 40);
+        jPanel1.add(doctorPassword);
+        doctorPassword.setBounds(330, 240, 190, 40);
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jButton1.setText("Login");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        doc_login.setBackground(new java.awt.Color(204, 204, 255));
+        doc_login.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        doc_login.setText("Login");
+        doc_login.setBorder(null);
+        doc_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                doc_loginActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(390, 310, 90, 40);
+        jPanel1.add(doc_login);
+        doc_login.setBounds(390, 310, 90, 40);
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -140,17 +145,47 @@ public class doclogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void doctorPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_doctorPasswordActionPerformed
 
     private void close_button(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_button
         dispose();
     }//GEN-LAST:event_close_button
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void doc_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doc_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+        con=my_sql_connect.connectdb();
+        String sq="Select * from doctor where doctorID = ?";
+        
+        String doc_id=doctorId.getText();
+        String doc_password= String.copyValueOf(doctorPassword.getPassword());     
+                              
+            try
+            {
+                pst=con.prepareStatement(sq);
+                pst.setString(1,doc_id);
+                rs=pst.executeQuery();
+
+                if(rs.next()) 
+                {
+                    if(doc_id.equals(rs.getString(1)) && doc_password.equals(rs.getString(2)))
+                    {
+                        //JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
+                        doctor_page docPage=new doctor_page();
+                        docPage.setVisible(true);
+                    } 
+                }                   
+                else
+                {
+                     JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","Access Denied...",JOptionPane.ERROR_MESSAGE);   
+                }
+ 
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_doc_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,7 +223,9 @@ public class doclogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton doc_login;
+    private javax.swing.JTextField doctorId;
+    private javax.swing.JPasswordField doctorPassword;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -198,7 +235,5 @@ public class doclogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

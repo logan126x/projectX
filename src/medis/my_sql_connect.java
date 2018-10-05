@@ -16,15 +16,14 @@ public class my_sql_connect {
     {
         try
         {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/MEDIS","project","projectmedis");
-        return con;
-         }
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/medis","root","");
+            return con;
+        }
         catch(Exception e)
-                {
-                  JOptionPane.showMessageDialog(null,e);
-                  return null;  
-                }
-   
-}
+        {
+            JOptionPane.showMessageDialog(null,e);
+            return null;  
+        }
+   }
 }

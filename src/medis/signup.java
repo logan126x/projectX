@@ -5,10 +5,7 @@
  */
 package medis;
 
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 //import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
@@ -17,17 +14,14 @@ import javax.swing.*;
 //import javax.servlet.http.HttpServletResponse;
 //import javax.servlet.http.HttpSession;
 
-
-
-
 /**
  *
  * @author KHSCI5MCA16126
  */
 public class signup extends javax.swing.JFrame {
-      Connection con=null;
-      PreparedStatement pst=null;
-      ResultSet rs=null;
+    Connection con=null;
+    PreparedStatement pst=null;
+    ResultSet rs=null;
       
     public signup() {
         initComponents();
@@ -162,55 +156,36 @@ public class signup extends javax.swing.JFrame {
     }//GEN-LAST:event_close_button
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+
         con=my_sql_connect.connectdb();
-        String sq="Select * from login where Admin_id=? and admin_password=?";
+        String sq="Select * from admin where adminid = ?";
         
-       //String adminid=admin_id1.getText();
-      // String adminpass;
-       //adminpass= String.copyValueOf(admin_pass.getPassword());
-             
-               
-               
-             try
-             {
-                 pst=con.prepareStatement(sq);
-                 pst.setString(1,admin_id1.getText());
-                 pst.setString(1,admin_pass.getText());
-                  rs=pst.executeQuery();
-                  if (rs.next())
-                  {
-                      //if(adminid.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
-                      //{
-                      JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
-                      Adminlogin_page a=new Adminlogin_page();
-                      a.setVisible(true);
-                   }
-                  else
-                  {
-                      JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","access denied",JOptionPane.ERROR_MESSAGE);
-                      
-                  }
-                 //  Class.forName("com.mysql.jdbc.Driver");
-                  // Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/MEDIS","project","projectmedis");
-                 //  Statement stmt =con.createStatement();
-                 //  ResultSet rs = stmt.executeQuery("select * from admin_Details");
-                 //  while (rs.next())
-                 //  {
-                    //String pwsd = rs.getString(2);
-                 //   if(adminid.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
-                  //  { 
-                 //       Adminlogin_page a=new Adminlogin_page();
-                  //      a.setVisible(true);
-                 //
-                        
-                        
-                   // }
-                   //}
-                   
-                   
-               }
-                catch(Exception e){}        
+        String admin_id=admin_id1.getText();
+        String adminpass= String.copyValueOf(admin_pass.getPassword());     
+                              
+            try
+            {
+                pst=con.prepareStatement(sq);
+                pst.setString(1,admin_id);
+                rs=pst.executeQuery();
+
+                if(rs.next()) 
+                {
+                    if(admin_id.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
+                    {
+                        JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
+                        Adminlogin_page a=new Adminlogin_page();
+                        a.setVisible(true);
+                    } 
+                }                   
+                else
+                {
+                     JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","access denied",JOptionPane.ERROR_MESSAGE);   
+                }
+ 
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null,e);
+            }        
     }//GEN-LAST:event_loginActionPerformed
    
     /**
