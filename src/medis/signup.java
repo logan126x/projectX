@@ -63,7 +63,7 @@ public class signup extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(24, 24, 24));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/adminlogin.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/adminlogin.png"))); // NOI18N
         jPanel2.add(jLabel2);
         jLabel2.setBounds(90, 80, 141, 150);
 
@@ -74,7 +74,7 @@ public class signup extends javax.swing.JFrame {
         jPanel2.add(jLabel3);
         jLabel3.setBounds(80, 230, 141, 34);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jPanel2.add(jLabel7);
         jLabel7.setBounds(0, 0, 300, 390);
@@ -129,9 +129,9 @@ public class signup extends javax.swing.JFrame {
             }
         });
         jPanel1.add(close);
-        close.setBounds(550, 10, 39, 20);
+        close.setBounds(560, 0, 39, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(300, 0, 300, 390);
@@ -140,14 +140,14 @@ public class signup extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(597, 387));
+        setSize(new java.awt.Dimension(600, 387));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

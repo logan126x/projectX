@@ -55,11 +55,11 @@ public class doclogin extends javax.swing.JFrame {
         jPanel2.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/login-doctor.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/login-doctor.png"))); // NOI18N
         jPanel2.add(jLabel1);
         jLabel1.setBounds(30, 80, 245, 211);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(0, 0, 300, 400);
@@ -121,7 +121,7 @@ public class doclogin extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(560, 0, 40, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(300, 0, 300, 400);

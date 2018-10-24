@@ -62,12 +62,12 @@ public class patlogin extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(204, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/PATIENTCONFRM.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/PATIENTCONFRM.png"))); // NOI18N
         jLabel1.setOpaque(true);
         jPanel2.add(jLabel1);
         jLabel1.setBounds(60, 140, 183, 95);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(0, 0, 300, 400);
@@ -130,7 +130,7 @@ public class patlogin extends javax.swing.JFrame {
         jPanel1.add(closeBtn);
         closeBtn.setBounds(550, 0, 50, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(300, 0, 300, 400);

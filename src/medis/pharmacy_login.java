@@ -61,23 +61,23 @@ public class pharmacy_login extends javax.swing.JFrame {
         jPanel2.setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/pharm_logo1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/pharm_logo1.jpg"))); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(70, 50, 168, 174);
+        jLabel1.setBounds(70, 100, 160, 160);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("PHARMACY ");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(90, 230, 123, 30);
+        jLabel2.setBounds(90, 260, 123, 30);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/dialo_background.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jPanel2.add(jLabel7);
         jLabel7.setBounds(0, 0, 300, 400);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 500);
+        jPanel2.setBounds(0, 0, 300, 400);
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -133,7 +133,7 @@ public class pharmacy_login extends javax.swing.JFrame {
         jPanel1.add(closeBtn);
         closeBtn.setBounds(560, 0, 40, 20);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\khsci5mca16126\\Downloads\\dialo_background.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(300, 0, 300, 400);
