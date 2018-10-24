@@ -73,7 +73,7 @@ public class patlogin extends javax.swing.JFrame {
         jLabel3.setBounds(0, 0, 300, 400);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 500);
+        jPanel2.setBounds(0, 0, 300, 400);
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
