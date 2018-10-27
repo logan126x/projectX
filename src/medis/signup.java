@@ -123,6 +123,7 @@ public class signup extends javax.swing.JFrame {
         close.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         close.setForeground(new java.awt.Color(255, 255, 255));
         close.setText("X");
+        close.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         close.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 close_button(evt);

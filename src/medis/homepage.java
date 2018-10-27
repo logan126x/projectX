@@ -202,7 +202,7 @@ public class homepage extends javax.swing.JFrame {
 
         jPanel10.setLayout(null);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/home_back.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/home_back.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jPanel10.add(jLabel4);
         jLabel4.setBounds(0, 0, 610, 350);
@@ -256,7 +256,7 @@ public class homepage extends javax.swing.JFrame {
         jPanel11.add(jButton9);
         jButton9.setBounds(60, 210, 110, 33);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/loginbackg.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/loginbackg.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel11.add(jLabel5);
         jLabel5.setBounds(0, 0, 610, 350);

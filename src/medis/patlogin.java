@@ -119,16 +119,17 @@ public class patlogin extends javax.swing.JFrame {
         patientLogin.setBounds(380, 310, 90, 40);
 
         closeBtn.setBackground(new java.awt.Color(255, 51, 51));
-        closeBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        closeBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         closeBtn.setForeground(new java.awt.Color(255, 255, 255));
         closeBtn.setText("X");
+        closeBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 close_button(evt);
             }
         });
         jPanel1.add(closeBtn);
-        closeBtn.setBounds(550, 0, 50, 20);
+        closeBtn.setBounds(560, 0, 40, 20);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");

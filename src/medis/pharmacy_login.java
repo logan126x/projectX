@@ -125,6 +125,7 @@ public class pharmacy_login extends javax.swing.JFrame {
         closeBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         closeBtn.setForeground(new java.awt.Color(255, 255, 255));
         closeBtn.setText("X");
+        closeBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 close_button(evt);
