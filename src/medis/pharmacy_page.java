@@ -32,7 +32,6 @@ public class pharmacy_page extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -43,6 +42,11 @@ public class pharmacy_page extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
+        jLayeredPane2 = new javax.swing.JLayeredPane();
+        pat_details = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        prescriptions = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -83,11 +87,13 @@ public class pharmacy_page extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dashboard.png"))); // NOI18N
-        jLabel3.setText("   DASHBOARD");
-
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/recruitment.png"))); // NOI18N
         jLabel6.setText("PATIENT DETAILS");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                patient_details(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -95,41 +101,42 @@ public class pharmacy_page extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addComponent(jLabel6)
-                .addGap(28, 28, 28))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/registration (1).png"))); // NOI18N
         jLabel5.setText(" PRESCRIPTIONS");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prescript_click(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(67, 67, 67)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -206,11 +213,10 @@ public class pharmacy_page extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(93, 856, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,8 +243,52 @@ public class pharmacy_page extends javax.swing.JFrame {
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        jLayeredPane2.setLayout(new java.awt.CardLayout());
+
+        jLabel4.setText("jLabel4");
+
+        javax.swing.GroupLayout pat_detailsLayout = new javax.swing.GroupLayout(pat_details);
+        pat_details.setLayout(pat_detailsLayout);
+        pat_detailsLayout.setHorizontalGroup(
+            pat_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pat_detailsLayout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(jLabel4)
+                .addContainerGap(461, Short.MAX_VALUE))
+        );
+        pat_detailsLayout.setVerticalGroup(
+            pat_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pat_detailsLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel4)
+                .addContainerGap(424, Short.MAX_VALUE))
+        );
+
+        jLayeredPane2.add(pat_details, "card2");
+
+        jLabel8.setText("jLabel8");
+
+        javax.swing.GroupLayout prescriptionsLayout = new javax.swing.GroupLayout(prescriptions);
+        prescriptions.setLayout(prescriptionsLayout);
+        prescriptionsLayout.setHorizontalGroup(
+            prescriptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(prescriptionsLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel8)
+                .addContainerGap(534, Short.MAX_VALUE))
+        );
+        prescriptionsLayout.setVerticalGroup(
+            prescriptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(prescriptionsLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel8)
+                .addContainerGap(449, Short.MAX_VALUE))
+        );
+
+        jLayeredPane2.add(prescriptions, "card3");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -246,11 +296,13 @@ public class pharmacy_page extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 609, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLayeredPane2))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLayeredPane2)
         );
 
         getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 29, 640, 490));
@@ -262,6 +314,16 @@ public class pharmacy_page extends javax.swing.JFrame {
     private void exit_button_click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit_button_click
          dispose();  // TODO add your handling code here:
     }//GEN-LAST:event_exit_button_click
+
+    private void patient_details(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patient_details
+        this.pat_details.setVisible(true);
+        this.prescriptions.setVisible(false);
+    }//GEN-LAST:event_patient_details
+
+    private void prescript_click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prescript_click
+       this.pat_details.setVisible(false);
+       this.prescriptions.setVisible(true);
+    }//GEN-LAST:event_prescript_click
 
     /**
      * @param args the command line arguments
@@ -302,11 +364,13 @@ public class pharmacy_page extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -315,5 +379,7 @@ public class pharmacy_page extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel pat_details;
+    private javax.swing.JPanel prescriptions;
     // End of variables declaration//GEN-END:variables
 }
