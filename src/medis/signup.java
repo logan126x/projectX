@@ -177,6 +177,8 @@ public class signup extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
                         Adminlogin_page a=new Adminlogin_page();
                         a.setVisible(true);
+                        //admin_id1.setText(null);
+                        admin_pass.setText(null);
                     } 
                 }                   
                 else

@@ -126,7 +126,7 @@
                           <EmptySpace pref="78" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="prolabel" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="log_label" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="logout_label" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
@@ -138,7 +138,7 @@
                           <EmptySpace pref="30" max="32767" attributes="0"/>
                           <Component id="prolabel" min="-2" pref="33" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="log_label" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="logout_label" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -162,7 +162,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dashclick"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="log_label">
+                <Component class="javax.swing.JLabel" name="logout_label">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Calibri" size="11" style="1"/>
@@ -174,7 +174,13 @@
                       <Image iconType="3" name="/medis/icons/logout.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="   LOG OUT"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Hand Cursor"/>
+                    </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="logout_labelMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

@@ -34,7 +34,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         prolabel = new javax.swing.JLabel();
-        log_label = new javax.swing.JLabel();
+        logout_label = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -119,10 +119,16 @@ public class Adminlogin_page extends javax.swing.JFrame {
             }
         });
 
-        log_label.setFont(new java.awt.Font("Calibri", 1, 11)); // NOI18N
-        log_label.setForeground(new java.awt.Color(255, 255, 255));
-        log_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/logout.png"))); // NOI18N
-        log_label.setText("   LOG OUT");
+        logout_label.setFont(new java.awt.Font("Calibri", 1, 11)); // NOI18N
+        logout_label.setForeground(new java.awt.Color(255, 255, 255));
+        logout_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/logout.png"))); // NOI18N
+        logout_label.setText("   LOG OUT");
+        logout_label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logout_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logout_labelMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -132,7 +138,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
                 .addContainerGap(78, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(prolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(log_label, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(logout_label, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
         jPanel4Layout.setVerticalGroup(
@@ -141,7 +147,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(prolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(log_label, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logout_label, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
 
@@ -895,6 +901,11 @@ public class Adminlogin_page extends javax.swing.JFrame {
         this.add_pharm.setVisible(true);
     }//GEN-LAST:event_add_pharmclick
 
+    private void logout_labelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logout_labelMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_logout_labelMouseClicked
+
     /**
          * @param args the command line arguments
      */
@@ -998,7 +1009,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JLabel log_label;
+    private javax.swing.JLabel logout_label;
     private javax.swing.JLabel prolabel;
     // End of variables declaration//GEN-END:variables
 }
