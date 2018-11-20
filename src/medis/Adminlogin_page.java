@@ -14,7 +14,6 @@ import javax.swing.table.DefaultTableModel;
  * @author KHSCI5MCA16126
  */
 public class Adminlogin_page extends javax.swing.JFrame {
-
     /**
      * Creates new form Adminlogin_page
      */
@@ -365,8 +364,8 @@ public class Adminlogin_page extends javax.swing.JFrame {
                 .addGap(62, 62, 62)
                 .addGroup(docDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(docDetailsLabel)
-                    .addComponent(docDetailsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(151, Short.MAX_VALUE))
+                    .addComponent(docDetailsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         docDetailsPanelLayout.setVerticalGroup(
             docDetailsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -553,7 +552,7 @@ public class Adminlogin_page extends javax.swing.JFrame {
                                     .addComponent(docDesignation, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(docPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(MaleDoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(FemaleDoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)))))))
+                                        .addComponent(FemaleDoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
                 .addContainerGap())
         );
         docPanelLayout.setVerticalGroup(
