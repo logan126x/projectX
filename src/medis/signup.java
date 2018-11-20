@@ -36,74 +36,74 @@ public class signup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        backPanel = new javax.swing.JPanel();
+        sidePanel = new javax.swing.JPanel();
+        iconLabel = new javax.swing.JLabel();
+        adminLabel = new javax.swing.JLabel();
+        LHSLabel = new javax.swing.JLabel();
+        loginLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
         admin_id1 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        idLabel = new javax.swing.JLabel();
         admin_pass = new javax.swing.JPasswordField();
         login = new javax.swing.JButton();
         close = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        RHSLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("signup");
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
+        backPanel.setBackground(new java.awt.Color(255, 255, 255));
+        backPanel.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
-        jPanel2.setLayout(null);
+        sidePanel.setBackground(new java.awt.Color(0, 102, 204));
+        sidePanel.setLayout(null);
 
-        jLabel2.setBackground(new java.awt.Color(24, 24, 24));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/adminlogin.png"))); // NOI18N
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(90, 80, 141, 150);
+        iconLabel.setBackground(new java.awt.Color(24, 24, 24));
+        iconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/adminlogin.png"))); // NOI18N
+        sidePanel.add(iconLabel);
+        iconLabel.setBounds(90, 80, 141, 150);
 
-        jLabel3.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("ADMIN");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(80, 230, 141, 34);
+        adminLabel.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        adminLabel.setForeground(new java.awt.Color(255, 255, 255));
+        adminLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        adminLabel.setText("ADMIN");
+        sidePanel.add(adminLabel);
+        adminLabel.setBounds(80, 230, 141, 34);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        jPanel2.add(jLabel7);
-        jLabel7.setBounds(0, 0, 300, 390);
+        LHSLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
+        LHSLabel.setText("jLabel7");
+        sidePanel.add(LHSLabel);
+        LHSLabel.setBounds(0, 0, 300, 390);
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 390);
+        backPanel.add(sidePanel);
+        sidePanel.setBounds(0, 0, 300, 390);
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Login");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(300, 50, 300, 30);
+        loginLabel.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
+        loginLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        loginLabel.setText("Login");
+        backPanel.add(loginLabel);
+        loginLabel.setBounds(300, 50, 300, 30);
 
-        jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel5.setText("Password");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(330, 210, 60, 14);
+        passwordLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        passwordLabel.setText("Password");
+        backPanel.add(passwordLabel);
+        passwordLabel.setBounds(330, 210, 60, 14);
 
         admin_id1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 204), 2, true));
-        jPanel1.add(admin_id1);
+        backPanel.add(admin_id1);
         admin_id1.setBounds(330, 130, 230, 40);
 
-        jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel6.setText("Admin Id");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(330, 110, 60, 14);
+        idLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        idLabel.setText("Admin Id");
+        backPanel.add(idLabel);
+        idLabel.setBounds(330, 110, 60, 14);
 
         admin_pass.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 153), 2, true));
-        jPanel1.add(admin_pass);
+        backPanel.add(admin_pass);
         admin_pass.setBounds(330, 230, 230, 40);
 
         login.setBackground(new java.awt.Color(204, 204, 204));
@@ -116,7 +116,7 @@ public class signup extends javax.swing.JFrame {
                 loginActionPerformed(evt);
             }
         });
-        jPanel1.add(login);
+        backPanel.add(login);
         login.setBounds(400, 320, 90, 30);
 
         close.setBackground(new java.awt.Color(255, 51, 51));
@@ -129,23 +129,23 @@ public class signup extends javax.swing.JFrame {
                 close_button(evt);
             }
         });
-        jPanel1.add(close);
+        backPanel.add(close);
         close.setBounds(560, 0, 39, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(300, 0, 300, 390);
+        RHSLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
+        RHSLabel.setText("jLabel1");
+        backPanel.add(RHSLabel);
+        RHSLabel.setBounds(300, 0, 300, 390);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE)
         );
 
         setSize(new java.awt.Dimension(600, 387));
@@ -159,9 +159,9 @@ public class signup extends javax.swing.JFrame {
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
 
         con=my_sql_connect.connectdb();
-        String sq="Select * from admin where adminid = ?";
+        String sq="Select * from admins where adminID = ?";
         
-        String admin_id=admin_id1.getText();
+        String admin_id=admin_id1.getText().toLowerCase();
         String adminpass= String.copyValueOf(admin_pass.getPassword());     
                               
             try
@@ -172,20 +172,15 @@ public class signup extends javax.swing.JFrame {
 
                 if(rs.next()) 
                 {
-                    if(admin_id.equals(rs.getString(1)) && adminpass.equals(rs.getString(2)))
-                    {
-                        JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
-                        Adminlogin_page a=new Adminlogin_page();
-                        a.setVisible(true);
-                        //admin_id1.setText(null);
-                        admin_pass.setText(null);
-                    } 
-                }                   
-                else
-                {
-                     JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","access denied",JOptionPane.ERROR_MESSAGE);   
+                    if(admin_id.equals(rs.getString(1)) && adminpass.equals(rs.getString(2))){
+                        Adminlogin_page adminpage=new Adminlogin_page(admin_id);
+                        adminpage.setVisible(true);                        
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","access denied",JOptionPane.ERROR_MESSAGE);   
+                    }
                 }
- 
+                admin_pass.setText(null);
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null,e);
             }        
@@ -228,18 +223,18 @@ public class signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LHSLabel;
+    private javax.swing.JLabel RHSLabel;
+    private javax.swing.JLabel adminLabel;
     private javax.swing.JTextField admin_id1;
     private javax.swing.JPasswordField admin_pass;
+    private javax.swing.JPanel backPanel;
     private javax.swing.JButton close;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel iconLabel;
+    private javax.swing.JLabel idLabel;
     private javax.swing.JButton login;
+    private javax.swing.JLabel loginLabel;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JPanel sidePanel;
     // End of variables declaration//GEN-END:variables
 }

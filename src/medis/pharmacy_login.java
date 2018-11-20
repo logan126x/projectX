@@ -32,81 +32,76 @@ public class pharmacy_login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        backPanel = new javax.swing.JPanel();
+        pharmacyPanel = new javax.swing.JPanel();
+        icon = new javax.swing.JLabel();
+        pharmacy = new javax.swing.JLabel();
+        pharmBGl = new javax.swing.JLabel();
+        loginLabel = new javax.swing.JLabel();
+        pharmIDLabel = new javax.swing.JLabel();
         pharmacistId = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
         pharmacistPassword = new javax.swing.JPasswordField();
         pharmacistLogin = new javax.swing.JButton();
         closeBtn = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        loginBG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPanel1.setPreferredSize(new java.awt.Dimension(300, 500));
-        jPanel1.setLayout(null);
+        backPanel.setBackground(new java.awt.Color(255, 255, 255));
+        backPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
+        backPanel.setPreferredSize(new java.awt.Dimension(300, 500));
+        backPanel.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel2.setPreferredSize(new java.awt.Dimension(300, 500));
-        jPanel2.setLayout(null);
+        pharmacyPanel.setBackground(new java.awt.Color(255, 255, 255));
+        pharmacyPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pharmacyPanel.setPreferredSize(new java.awt.Dimension(300, 500));
+        pharmacyPanel.setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/pharm_logo1.jpg"))); // NOI18N
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(70, 100, 160, 160);
+        icon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/pharm_logo1.jpg"))); // NOI18N
+        pharmacyPanel.add(icon);
+        icon.setBounds(70, 100, 160, 160);
 
-        jLabel2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PHARMACY ");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(90, 260, 123, 30);
+        pharmacy.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        pharmacy.setForeground(new java.awt.Color(255, 255, 255));
+        pharmacy.setText("PHARMACY ");
+        pharmacyPanel.add(pharmacy);
+        pharmacy.setBounds(90, 260, 123, 30);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        jPanel2.add(jLabel7);
-        jLabel7.setBounds(0, 0, 300, 400);
+        pharmBGl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
+        pharmBGl.setText("jLabel7");
+        pharmacyPanel.add(pharmBGl);
+        pharmBGl.setBounds(0, 0, 300, 400);
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 400);
+        backPanel.add(pharmacyPanel);
+        pharmacyPanel.setBounds(0, 0, 300, 400);
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Login");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(300, 40, 300, 50);
+        loginLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        loginLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        loginLabel.setText("Login");
+        backPanel.add(loginLabel);
+        loginLabel.setBounds(300, 40, 300, 50);
 
-        jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel5.setText("Pharmacist ID");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(330, 110, 110, 30);
+        pharmIDLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        pharmIDLabel.setText("Pharmacist ID");
+        backPanel.add(pharmIDLabel);
+        pharmIDLabel.setBounds(330, 110, 110, 30);
 
         pharmacistId.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         pharmacistId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPanel1.add(pharmacistId);
+        backPanel.add(pharmacistId);
         pharmacistId.setBounds(330, 140, 190, 40);
 
-        jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel6.setText("Password");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(330, 210, 140, 30);
+        passwordLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        passwordLabel.setText("Password");
+        backPanel.add(passwordLabel);
+        passwordLabel.setBounds(330, 210, 140, 30);
 
         pharmacistPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        pharmacistPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pharmacistPasswordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(pharmacistPassword);
+        backPanel.add(pharmacistPassword);
         pharmacistPassword.setBounds(330, 240, 190, 40);
 
         pharmacistLogin.setBackground(new java.awt.Color(204, 204, 255));
@@ -118,7 +113,7 @@ public class pharmacy_login extends javax.swing.JFrame {
                 pharmacistLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(pharmacistLogin);
+        backPanel.add(pharmacistLogin);
         pharmacistLogin.setBounds(400, 320, 90, 40);
 
         closeBtn.setBackground(new java.awt.Color(255, 0, 0));
@@ -131,32 +126,28 @@ public class pharmacy_login extends javax.swing.JFrame {
                 close_button(evt);
             }
         });
-        jPanel1.add(closeBtn);
+        backPanel.add(closeBtn);
         closeBtn.setBounds(560, 0, 40, 20);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(300, 0, 300, 400);
+        loginBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
+        loginBG.setText("jLabel3");
+        backPanel.add(loginBG);
+        loginBG.setBounds(300, 0, 300, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(backPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setSize(new java.awt.Dimension(600, 397));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void pharmacistPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pharmacistPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pharmacistPasswordActionPerformed
 
     private void close_button(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_button
         dispose();
@@ -166,9 +157,9 @@ public class pharmacy_login extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         con=my_sql_connect.connectdb();
-        String sq="Select * from pharmacy where pharmacistID = ?";
+        String sq="Select * from pharmacy where phrmstID = ?";
         
-        String pharmacist_id=pharmacistId.getText();
+        String pharmacist_id=pharmacistId.getText().toLowerCase();
         String pharmacist_password= String.copyValueOf(pharmacistPassword.getPassword());     
                               
             try
@@ -177,20 +168,19 @@ public class pharmacy_login extends javax.swing.JFrame {
                 pst.setString(1,pharmacist_id);
                 rs=pst.executeQuery();
 
-                if(rs.next()) 
-                {
+                if(rs.next()) {
                     if(pharmacist_id.equals(rs.getString(1)) && pharmacist_password.equals(rs.getString(2)))
                     {
                         //JOptionPane.showMessageDialog(null,"WELCOME ");
-                        Adminlogin_page a=new Adminlogin_page();
-                        a.setVisible(true);
-                    } 
+                        pharmacy_page pharm = new pharmacy_page(pharmacist_id);
+                        pharm.setVisible(true);
+                    }                     
                 }                   
-                else
-                {
+                else {
                      JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","Access denied...",JOptionPane.ERROR_MESSAGE);   
                 }
- 
+                pharmacistPassword.setText(null);
+                
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null,e);
             }        
@@ -233,18 +223,18 @@ public class pharmacy_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel backPanel;
     private javax.swing.JButton closeBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel icon;
+    private javax.swing.JLabel loginBG;
+    private javax.swing.JLabel loginLabel;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JLabel pharmBGl;
+    private javax.swing.JLabel pharmIDLabel;
     private javax.swing.JTextField pharmacistId;
     private javax.swing.JButton pharmacistLogin;
     private javax.swing.JPasswordField pharmacistPassword;
+    private javax.swing.JLabel pharmacy;
+    private javax.swing.JPanel pharmacyPanel;
     // End of variables declaration//GEN-END:variables
 }

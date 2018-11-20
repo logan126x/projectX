@@ -94,7 +94,6 @@ public class homepage extends javax.swing.JFrame {
         lhspanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 280, 130));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\khsci5mca16126\\Downloads\\medislogo.png")); // NOI18N
         jLabel7.setText("jLabel7");
         lhspanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, -10, 126, 112));
 
@@ -135,7 +134,7 @@ public class homepage extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/home_back.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jPanel10.add(jLabel4);
-        jLabel4.setBounds(10, 40, 600, 310);
+        jLabel4.setBounds(0, 40, 600, 300);
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
         jLabel11.setFont(new java.awt.Font("Segoe Script", 1, 14)); // NOI18N
@@ -155,6 +154,7 @@ public class homepage extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton6.setText("DOCTOR");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 doc_button(evt);
@@ -165,6 +165,7 @@ public class homepage extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton7.setText("PHARMACY");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pharmacy_button(evt);
@@ -175,6 +176,7 @@ public class homepage extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton8.setText("PATIENT");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 patient_button(evt);
@@ -185,6 +187,7 @@ public class homepage extends javax.swing.JFrame {
 
         jButton9.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton9.setText("ADMIN");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_button(evt);

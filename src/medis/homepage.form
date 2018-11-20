@@ -153,9 +153,6 @@
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\khsci5mca16126\Downloads\medislogo.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel7"/>
               </Properties>
               <Constraints>
@@ -268,7 +265,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="10" y="40" width="600" height="310"/>
+                          <AbsoluteConstraints x="0" y="40" width="600" height="300"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -325,6 +322,9 @@
                           <Font name="Calibri" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="DOCTOR"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Hand Cursor"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="doc_button"/>
@@ -341,6 +341,9 @@
                           <Font name="Calibri" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="PHARMACY"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Hand Cursor"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pharmacy_button"/>
@@ -357,6 +360,9 @@
                           <Font name="Calibri" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="PATIENT"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Hand Cursor"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="patient_button"/>
@@ -373,6 +379,9 @@
                           <Font name="Calibri" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="ADMIN"/>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Hand Cursor"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="admin_button"/>

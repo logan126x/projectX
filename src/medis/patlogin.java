@@ -34,88 +34,84 @@ public class patlogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        backPanel = new javax.swing.JPanel();
+        patLoginPanel = new javax.swing.JPanel();
+        patiLoginLabel = new javax.swing.JLabel();
+        patientBG = new javax.swing.JLabel();
+        login = new javax.swing.JLabel();
+        patLoginLabel = new javax.swing.JLabel();
         patientId = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
         patientPassword = new javax.swing.JPasswordField();
         patientLogin = new javax.swing.JButton();
         closeBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        loginBG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
-        jPanel1.setPreferredSize(new java.awt.Dimension(300, 500));
-        jPanel1.setLayout(null);
+        backPanel.setBackground(new java.awt.Color(255, 255, 255));
+        backPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 0), 2, true));
+        backPanel.setPreferredSize(new java.awt.Dimension(300, 500));
+        backPanel.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(34, 117, 117));
-        jPanel2.setPreferredSize(new java.awt.Dimension(300, 500));
-        jPanel2.setLayout(null);
+        patLoginPanel.setBackground(new java.awt.Color(34, 117, 117));
+        patLoginPanel.setPreferredSize(new java.awt.Dimension(300, 500));
+        patLoginPanel.setLayout(null);
 
-        jLabel1.setBackground(new java.awt.Color(204, 102, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/PATIENTCONFRM.png"))); // NOI18N
-        jLabel1.setOpaque(true);
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(60, 140, 183, 95);
+        patiLoginLabel.setBackground(new java.awt.Color(204, 102, 255));
+        patiLoginLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        patiLoginLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/PATIENTCONFRM.png"))); // NOI18N
+        patiLoginLabel.setOpaque(true);
+        patLoginPanel.add(patiLoginLabel);
+        patiLoginLabel.setBounds(60, 140, 183, 95);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(0, 0, 300, 400);
+        patientBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
+        patientBG.setText("jLabel3");
+        patLoginPanel.add(patientBG);
+        patientBG.setBounds(0, 0, 300, 400);
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 300, 400);
+        backPanel.add(patLoginPanel);
+        patLoginPanel.setBounds(0, 0, 300, 400);
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Login");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(300, 40, 300, 50);
+        login.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login.setText("Login");
+        backPanel.add(login);
+        login.setBounds(300, 40, 300, 50);
 
-        jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel5.setText("Patient ID");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(330, 110, 110, 30);
+        patLoginLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        patLoginLabel.setText("Patient ID");
+        backPanel.add(patLoginLabel);
+        patLoginLabel.setBounds(330, 110, 110, 30);
 
         patientId.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         patientId.setForeground(new java.awt.Color(153, 51, 255));
         patientId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(34, 117, 117), 2, true));
-        jPanel1.add(patientId);
+        backPanel.add(patientId);
         patientId.setBounds(330, 140, 190, 40);
 
-        jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel6.setText("Password");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(330, 210, 140, 30);
+        passwordLabel.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        passwordLabel.setText("Password");
+        backPanel.add(passwordLabel);
+        passwordLabel.setBounds(330, 210, 140, 30);
 
         patientPassword.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(34, 117, 117), 2, true));
-        patientPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                patientPasswordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(patientPassword);
+        backPanel.add(patientPassword);
         patientPassword.setBounds(330, 240, 190, 40);
 
         patientLogin.setBackground(new java.awt.Color(204, 204, 255));
         patientLogin.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         patientLogin.setText("Login");
         patientLogin.setBorder(null);
+        patientLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         patientLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 patientLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(patientLogin);
+        backPanel.add(patientLogin);
         patientLogin.setBounds(380, 310, 90, 40);
 
         closeBtn.setBackground(new java.awt.Color(255, 51, 51));
@@ -128,32 +124,28 @@ public class patlogin extends javax.swing.JFrame {
                 close_button(evt);
             }
         });
-        jPanel1.add(closeBtn);
+        backPanel.add(closeBtn);
         closeBtn.setBounds(560, 0, 40, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(300, 0, 300, 400);
+        loginBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medis/icons/dialo_background.jpg"))); // NOI18N
+        loginBG.setText("jLabel2");
+        backPanel.add(loginBG);
+        loginBG.setBounds(300, 0, 300, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(backPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(backPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setSize(new java.awt.Dimension(600, 397));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void patientPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_patientPasswordActionPerformed
 
     private void close_button(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_button
         dispose();
@@ -163,10 +155,10 @@ public class patlogin extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         con=my_sql_connect.connectdb();
-        String sq="Select * from admin patient patientID = ?";
+        String sq="Select * from patient where patID = ?";
         
-        String patient_id=patientId.getText();
-        String patient_password= String.copyValueOf(patientPassword.getPassword());     
+        String patient_id = patientId.getText().toLowerCase();
+        String patient_password = String.copyValueOf(patientPassword.getPassword());     
                               
             try
             {
@@ -179,15 +171,15 @@ public class patlogin extends javax.swing.JFrame {
                     if(patient_id.equals(rs.getString(1)) && patient_password.equals(rs.getString(2)))
                     {
                         //JOptionPane.showMessageDialog(null,"WELCOME ADMIN");
-                        Adminlogin_page a=new Adminlogin_page();
-                        a.setVisible(true);
+                        patient_page patient=new patient_page(patient_id);
+                        patient.setVisible(true);
                     } 
                 }                   
                 else
                 {
                      JOptionPane.showMessageDialog(null,"INVALID USERNAME/PASSWORD","Access Denied...",JOptionPane.ERROR_MESSAGE);   
                 }
- 
+                patientPassword.setText(null);
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null,e);
             }        
@@ -230,15 +222,15 @@ public class patlogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel backPanel;
     private javax.swing.JButton closeBtn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel login;
+    private javax.swing.JLabel loginBG;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JLabel patLoginLabel;
+    private javax.swing.JPanel patLoginPanel;
+    private javax.swing.JLabel patiLoginLabel;
+    private javax.swing.JLabel patientBG;
     private javax.swing.JTextField patientId;
     private javax.swing.JButton patientLogin;
     private javax.swing.JPasswordField patientPassword;
